@@ -1,0 +1,855 @@
+Release 14.7 Xflow P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc7z020clg484-1 -implement xflow.opt system.ngc 
+ 
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/zynq/data/zynq.acd>
+with local file <C:/Xilinx/14.7/ISE_DS/ISE/zynq/data/zynq.acd>
+
+Using Flow File: D:/zynq_memcpy/implementation/fpga.flw 
+Using Option File(s): 
+ D:/zynq_memcpy/implementation/xflow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc7z020clg484-1 -nt timestamp -bm system.bmm
+"D:/zynq_memcpy/implementation/system.ngc" -uc system.ucf system.ngd 
+#----------------------------------------------#
+Release 14.7 - ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/zynq/data/zynq.acd>
+with local file <C:/Xilinx/14.7/ISE_DS/ISE/zynq/data/zynq.acd>
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+xc7z020clg484-1 -nt timestamp -bm system.bmm
+D:/zynq_memcpy/implementation/system.ngc -uc system.ucf system.ngd
+
+Reading NGO file "D:/zynq_memcpy/implementation/system.ngc" ...
+Loading design module
+"D:/zynq_memcpy/implementation/system_processing_system7_0_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_axi4lite_0_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_axi_interconnect_1_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_memcpy_0_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_sws_8bits_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_leds_8bits_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_btns_5bits_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ngc"...
+Loading design module
+"D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ngc"...
+Applying constraints in
+"D:/zynq_memcpy/implementation/system_processing_system7_0_wrapper.ncf" to
+module "processing_system7_0"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/zynq_memcpy/implementation/system_axi4lite_0_wrapper.ncf" to module
+"axi4lite_0"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/zynq_memcpy/implementation/system_axi_interconnect_1_wrapper.ncf" to module
+"axi_interconnect_1"...
+Checking Constraint Associations...
+Applying constraints in
+"D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf" to module
+"chipscope_ila_0"...
+WARNING:ConstraintSystem:192 - The TNM 'D2_CLK', does not directly or indirectly
+   drive any flip-flops, latches and/or RAMS and cannot be actively used by the
+   referencing TIg constraint ''. If clock manager blocks are directly or
+   indirectly driven, a new TNM constraint will not be derived since the none of
+   the referencing constraints are a PERIOD constraint. This TNM is used in the
+   following user groups and/or specifications:
+   <TIMESPEC TS_D2_TO_T2 = FROM D2_CLK TO "FFS" TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(6)]
+   <TIMESPEC TS_J2_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(7)]
+   <TIMESPEC TS_J3_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(8)]
+   <TIMESPEC TS_J4_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(9)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_D2_TO_T2 = FROM D2_CLK TO "FFS" TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(6)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J2_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(7)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J3_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(8)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J4_TO_D2 = FROM "FFS" TO D2_CLK TIG;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(9)]
+
+Checking Constraint Associations...
+INFO:NgdBuild:981 - Could not find any associations for the following
+   constraint:
+       '<INST "U0/*/U_STAT/U_DIRTY_LDC" TNM = D2_CLK;>
+   [D:/zynq_memcpy/implementation/system_chipscope_ila_0_wrapper.ncf(5)]'
+Applying constraints in
+"D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf" to module
+"chipscope_icon_0"...
+WARNING:ConstraintSystem:190 - The TNM 'J_CLK', does not directly or indirectly
+   drive any flip-flops, latches and/or RAMS and cannot be actively used by the
+   referencing Period constraint 'TS_J_CLK'. If clock manager blocks are
+   directly or indirectly driven, a new TNM and PERIOD are derived only if the
+   PERIOD constraint is the only referencing constraint and if an output of the
+   clock manager block drives flip-flops, latches or RAMs.  
+   This TNM is used in the following user groups and/or specifications:
+   <TIMESPEC TS_J_CLK = PERIOD J_CLK 30 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(2)]
+   <TIMESPEC TS_U_TO_J = FROM U_CLK TO J_CLK 15 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(6)]
+   <TIMESPEC TS_J_TO_D = FROM J_CLK TO D_CLK TIG ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(8)]
+   <TIMESPEC TS_D_TO_J = FROM D_CLK TO J_CLK TIG ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(9)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J_CLK = PERIOD J_CLK 30 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(2)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_U_TO_J = FROM U_CLK TO J_CLK 15 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(6)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_J_TO_D = FROM J_CLK TO D_CLK TIG ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(8)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_D_TO_J = FROM D_CLK TO J_CLK TIG ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(9)]
+
+WARNING:ConstraintSystem:192 - The TNM 'U_CLK', does not directly or indirectly
+   drive any flip-flops, latches and/or RAMS and cannot be actively used by the
+   referencing MaxDelay constraint 'TS_U_TO_J'. If clock manager blocks are
+   directly or indirectly driven, a new TNM constraint will not be derived since
+   the none of the referencing constraints are a PERIOD constraint. This TNM is
+   used in the following user groups and/or specifications:
+   <TIMESPEC TS_U_TO_J = FROM U_CLK TO J_CLK 15 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(6)]
+   <TIMESPEC TS_U_TO_U = FROM U_CLK TO U_CLK 15 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(7)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_U_TO_J = FROM U_CLK TO J_CLK 15 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(6)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC TS_U_TO_U = FROM U_CLK TO U_CLK 15 ns ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(7)]
+
+Checking Constraint Associations...
+INFO:NgdBuild:981 - Could not find any associations for the following
+   constraint:
+       '<NET "U0/U_ICON/*/iDRCK_LOCAL" TNM_NET = J_CLK ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(1)]'
+INFO:NgdBuild:981 - Could not find any associations for the following
+   constraint:
+       '<NET "U0/iUPDATE_OUT" TNM_NET = U_CLK ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(4)]'
+WARNING:NgdBuild:981 - Could not find any associations for the following
+   constraint:
+       '<NET "U0/iSHIFT_OUT" TIG ;>
+   [D:/zynq_memcpy/implementation/system_chipscope_icon_0_wrapper.ncf(5)]'
+Gathering constraint information from source properties...
+Done.
+INFO:NgdBuild:649 - Removing redundant 'IBUF' symbol
+   'processing_system7_0_PS_PORB_IBUF'.  All constraints associated with this
+   symbol will be ignored.
+INFO:NgdBuild:649 - Removing redundant 'IBUF' symbol
+   'processing_system7_0_PS_CLK_IBUF'.  All constraints associated with this
+   symbol will be ignored.
+INFO:NgdBuild:649 - Removing redundant 'IBUF' symbol
+   'processing_system7_0_PS_SRSTB_IBUF'.  All constraints associated with this
+   symbol will be ignored.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J_CLK = PERIOD "J_CLK"
+   30000.000000000 pS HIGH 50.000000000 %;>: Unable to find an active 'TNM' or
+   'TimeGrp' constraint named 'J_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_U_TO_J = FROM "U_CLK" TO
+   "J_CLK" 15000.000000000 pS;>: Unable to find an active 'TimeGrp' or 'TNM' or
+   'TPSync' constraint named 'U_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_U_TO_J = FROM "U_CLK" TO
+   "J_CLK" 15000.000000000 pS;>: Unable to find an active 'TimeGrp' or 'TNM' or
+   'TPSync' constraint named 'J_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_U_TO_U = FROM "U_CLK" TO
+   "U_CLK" 15000.000000000 pS;>: Unable to find an active 'TimeGrp' or 'TNM' or
+   'TPSync' constraint named 'U_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_U_TO_U = FROM "U_CLK" TO
+   "U_CLK" 15000.000000000 pS;>: Unable to find an active 'TimeGrp' or 'TNM' or
+   'TPSync' constraint named 'U_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J_TO_D = FROM "J_CLK" TO
+   "D_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'J_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_D_TO_J = FROM "D_CLK" TO
+   "J_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'J_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_D2_TO_T2 = FROM "D2_CLK"
+   TO FFS TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J2_TO_D2 = FROM FFS TO
+   "D2_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J3_TO_D2 = FROM FFS TO
+   "D2_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J4_TO_D2 = FROM FFS TO
+   "D2_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'D2_CLK'.
+
+WARNING:ConstraintSystem:135 - Constraint <INST
+   /system/EXPANDED/system/axi_interconnect_1/axi_interconnect_1\/si_converter_b
+   ank\/gen_conv_slot[0].clock_conv_inst\/interconnect_aresetn_resync<2>_inv1_IN
+   V_0 TNM = FFS:axi_interconnect_1_reset...>: No instances of type FFS were
+   found under block
+   "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clo
+   ck_conv_inst/interconnect_aresetn_resync<2>_inv1_INV_0" (type=INV).
+
+WARNING:ConstraintSystem:135 - Constraint <INST
+   /system/EXPANDED/system/axi4lite_0/axi4lite_0\/si_converter_bank\/gen_conv_sl
+   ot[0].clock_conv_inst\/interconnect_aresetn_resync<2>_inv1_INV_0 TNM =
+   FFS:axi4lite_0_reset_resync>: No instances of type FFS were found under block
+   "axi4lite_0/axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/int
+   erconnect_aresetn_resync<2>_inv1_INV_0" (type=INV).
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "processing_system7_0_PS_PORB_IBUF" LOC = B5>' could not be found and
+   so the Locate constraint will be removed.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "processing_system7_0_PS_CLK_IBUF" LOC = F7>' could not be found and so
+   the Locate constraint will be removed.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "processing_system7_0_PS_SRSTB_IBUF" LOC = C9>' could not be found and
+   so the Locate constraint will be removed.
+
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP axi4lite_0_reset_source = FFS
+   PADS CPUS;>: CPUS "*" does not match any design objects.
+
+WARNING:ConstraintSystem:58 - Constraint <TIMEGRP
+   axi_interconnect_1_reset_source = FFS PADS CPUS;>: CPUS "*" does not match
+   any design objects.
+
+WARNING:ConstraintSystem:194 - The TNM 'axi_interconnect_1_reset_resync', does
+   not directly or indirectly drive any flip-flops, latches and/or RAMs and is
+   not actively used by any referencing constraint.
+
+WARNING:ConstraintSystem:194 - The TNM 'axi4lite_0_reset_resync', does not
+   directly or indirectly drive any flip-flops, latches and/or RAMs and is not
+   actively used by any referencing constraint.
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+WARNING::53 - File 'system.bmm' is empty or has no BMM content.
+
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'N155' has no driver
+WARNING:NgdBuild:452 - logical net 'N156' has no driver
+WARNING:NgdBuild:452 - logical net 'N157' has no driver
+WARNING:NgdBuild:452 - logical net 'N158' has no driver
+WARNING:NgdBuild:452 - logical net 'N159' has no driver
+WARNING:NgdBuild:452 - logical net 'N160' has no driver
+WARNING:NgdBuild:452 - logical net 'N161' has no driver
+WARNING:NgdBuild:452 - logical net 'N162' has no driver
+WARNING:NgdBuild:452 - logical net 'N163' has no driver
+WARNING:NgdBuild:452 - logical net 'N164' has no driver
+WARNING:NgdBuild:452 - logical net 'N165' has no driver
+WARNING:NgdBuild:452 - logical net 'N166' has no driver
+WARNING:NgdBuild:452 - logical net 'N167' has no driver
+WARNING:NgdBuild:452 - logical net 'N168' has no driver
+WARNING:NgdBuild:452 - logical net 'N169' has no driver
+WARNING:NgdBuild:452 - logical net 'N170' has no driver
+WARNING:NgdBuild:452 - logical net 'N171' has no driver
+WARNING:NgdBuild:452 - logical net 'N172' has no driver
+WARNING:NgdBuild:452 - logical net 'N173' has no driver
+WARNING:NgdBuild:452 - logical net 'N174' has no driver
+WARNING:NgdBuild:452 - logical net 'N175' has no driver
+WARNING:NgdBuild:452 - logical net 'N176' has no driver
+WARNING:NgdBuild:452 - logical net 'N177' has no driver
+WARNING:NgdBuild:452 - logical net 'N178' has no driver
+WARNING:NgdBuild:452 - logical net 'N179' has no driver
+WARNING:NgdBuild:452 - logical net 'N180' has no driver
+WARNING:NgdBuild:452 - logical net 'N181' has no driver
+WARNING:NgdBuild:452 - logical net 'N182' has no driver
+WARNING:NgdBuild:452 - logical net 'N183' has no driver
+WARNING:NgdBuild:452 - logical net 'N184' has no driver
+WARNING:NgdBuild:452 - logical net 'N185' has no driver
+WARNING:NgdBuild:452 - logical net 'N186' has no driver
+WARNING:NgdBuild:452 - logical net 'N187' has no driver
+WARNING:NgdBuild:452 - logical net 'N188' has no driver
+WARNING:NgdBuild:452 - logical net 'N189' has no driver
+WARNING:NgdBuild:452 - logical net 'N190' has no driver
+WARNING:NgdBuild:452 - logical net 'N191' has no driver
+WARNING:NgdBuild:452 - logical net 'N192' has no driver
+WARNING:NgdBuild:452 - logical net 'N193' has no driver
+WARNING:NgdBuild:452 - logical net 'N194' has no driver
+WARNING:NgdBuild:452 - logical net 'N195' has no driver
+WARNING:NgdBuild:452 - logical net 'N196' has no driver
+WARNING:NgdBuild:452 - logical net 'N197' has no driver
+WARNING:NgdBuild:452 - logical net 'N198' has no driver
+WARNING:NgdBuild:452 - logical net 'N199' has no driver
+WARNING:NgdBuild:452 - logical net 'N200' has no driver
+WARNING:NgdBuild:452 - logical net 'N201' has no driver
+WARNING:NgdBuild:452 - logical net 'N202' has no driver
+WARNING:NgdBuild:452 - logical net 'N203' has no driver
+WARNING:NgdBuild:452 - logical net 'N204' has no driver
+WARNING:NgdBuild:452 - logical net 'N205' has no driver
+WARNING:NgdBuild:452 - logical net 'N206' has no driver
+WARNING:NgdBuild:452 - logical net 'N207' has no driver
+WARNING:NgdBuild:452 - logical net 'N208' has no driver
+WARNING:NgdBuild:452 - logical net 'N209' has no driver
+WARNING:NgdBuild:452 - logical net 'N210' has no driver
+WARNING:NgdBuild:452 - logical net 'N211' has no driver
+WARNING:NgdBuild:452 - logical net 'N212' has no driver
+WARNING:NgdBuild:452 - logical net 'N213' has no driver
+WARNING:NgdBuild:452 - logical net 'N214' has no driver
+WARNING:NgdBuild:452 - logical net 'N215' has no driver
+WARNING:NgdBuild:452 - logical net 'N216' has no driver
+WARNING:NgdBuild:452 - logical net 'N217' has no driver
+WARNING:NgdBuild:452 - logical net 'N218' has no driver
+WARNING:NgdBuild:452 - logical net 'N219' has no driver
+WARNING:NgdBuild:452 - logical net 'N220' has no driver
+WARNING:NgdBuild:452 - logical net 'N221' has no driver
+WARNING:NgdBuild:452 - logical net 'N222' has no driver
+WARNING:NgdBuild:452 - logical net 'N223' has no driver
+WARNING:NgdBuild:452 - logical net 'N224' has no driver
+WARNING:NgdBuild:452 - logical net 'N225' has no driver
+WARNING:NgdBuild:452 - logical net 'N226' has no driver
+WARNING:NgdBuild:452 - logical net 'N227' has no driver
+WARNING:NgdBuild:452 - logical net 'N228' has no driver
+WARNING:NgdBuild:452 - logical net 'N229' has no driver
+WARNING:NgdBuild:452 - logical net 'N230' has no driver
+WARNING:NgdBuild:452 - logical net 'N231' has no driver
+WARNING:NgdBuild:452 - logical net 'N232' has no driver
+WARNING:NgdBuild:452 - logical net 'N233' has no driver
+WARNING:NgdBuild:452 - logical net 'N234' has no driver
+WARNING:NgdBuild:452 - logical net 'N235' has no driver
+WARNING:NgdBuild:452 - logical net 'N236' has no driver
+WARNING:NgdBuild:452 - logical net 'N237' has no driver
+WARNING:NgdBuild:452 - logical net 'N238' has no driver
+WARNING:NgdBuild:452 - logical net 'N239' has no driver
+WARNING:NgdBuild:452 - logical net 'N240' has no driver
+WARNING:NgdBuild:452 - logical net 'N241' has no driver
+WARNING:NgdBuild:452 - logical net 'N242' has no driver
+WARNING:NgdBuild:452 - logical net 'N243' has no driver
+WARNING:NgdBuild:452 - logical net 'N244' has no driver
+WARNING:NgdBuild:452 - logical net 'N245' has no driver
+WARNING:NgdBuild:452 - logical net 'N246' has no driver
+WARNING:NgdBuild:452 - logical net 'N247' has no driver
+WARNING:NgdBuild:452 - logical net 'N248' has no driver
+WARNING:NgdBuild:452 - logical net 'N249' has no driver
+WARNING:NgdBuild:452 - logical net 'N250' has no driver
+WARNING:NgdBuild:452 - logical net 'N251' has no driver
+WARNING:NgdBuild:452 - logical net 'N252' has no driver
+WARNING:NgdBuild:452 - logical net 'N253' has no driver
+WARNING:NgdBuild:452 - logical net 'N254' has no driver
+WARNING:NgdBuild:452 - logical net 'N255' has no driver
+WARNING:NgdBuild:452 - logical net 'N256' has no driver
+WARNING:NgdBuild:452 - logical net 'N257' has no driver
+WARNING:NgdBuild:452 - logical net 'N258' has no driver
+WARNING:NgdBuild:452 - logical net 'N259' has no driver
+WARNING:NgdBuild:452 - logical net 'N260' has no driver
+WARNING:NgdBuild:452 - logical net 'N261' has no driver
+WARNING:NgdBuild:452 - logical net 'N262' has no driver
+WARNING:NgdBuild:452 - logical net 'N263' has no driver
+WARNING:NgdBuild:452 - logical net 'N264' has no driver
+WARNING:NgdBuild:452 - logical net 'N265' has no driver
+WARNING:NgdBuild:452 - logical net 'N266' has no driver
+WARNING:NgdBuild:452 - logical net 'N267' has no driver
+WARNING:NgdBuild:452 - logical net 'N268' has no driver
+WARNING:NgdBuild:452 - logical net 'N269' has no driver
+WARNING:NgdBuild:452 - logical net 'N270' has no driver
+WARNING:NgdBuild:452 - logical net 'N271' has no driver
+WARNING:NgdBuild:452 - logical net 'N272' has no driver
+WARNING:NgdBuild:452 - logical net 'N273' has no driver
+WARNING:NgdBuild:452 - logical net 'N274' has no driver
+WARNING:NgdBuild:452 - logical net 'N275' has no driver
+WARNING:NgdBuild:452 - logical net 'N276' has no driver
+WARNING:NgdBuild:452 - logical net 'N277' has no driver
+WARNING:NgdBuild:452 - logical net 'N278' has no driver
+WARNING:NgdBuild:452 - logical net 'N279' has no driver
+WARNING:NgdBuild:452 - logical net 'N280' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 160
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  27 sec
+Total CPU time to NGDBUILD completion:   24 sec
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -w -pr b -ol high -timing -detail system.ngd system.pcf 
+#----------------------------------------------#
+Release 14.7 - Map P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<C:/Xilinx/14.7/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/data/Xdh_PrimTypeLib.xda>
+Using target part "7z020clg484-1".
+WARNING:LIT:701 - PAD symbol "processing_system7_0_PS_SRSTB" has an undefined
+   IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "processing_system7_0_PS_SRSTB" is not constrained
+   (LOC) to a specific location.
+WARNING:LIT:701 - PAD symbol "processing_system7_0_PS_CLK" has an undefined
+   IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "processing_system7_0_PS_CLK" is not constrained
+   (LOC) to a specific location.
+WARNING:LIT:701 - PAD symbol "processing_system7_0_PS_PORB" has an undefined
+   IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "processing_system7_0_PS_PORB" is not constrained
+   (LOC) to a specific location.
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 25 secs 
+Total CPU  time at the beginning of Placer: 22 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:e689ea50) REAL time: 27 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:e689ea50) REAL time: 28 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:29157c5c) REAL time: 28 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:e4f03e71) REAL time: 32 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:e4f03e71) REAL time: 32 secs 
+
+Phase 6.3  Local Placement Optimization
+Phase 6.3  Local Placement Optimization (Checksum:e4f03e71) REAL time: 32 secs 
+
+Phase 7.5  Local Placement Optimization
+Phase 7.5  Local Placement Optimization (Checksum:e4f03e71) REAL time: 32 secs 
+
+Phase 8.8  Global Placement
+........................................
+.
+.........................................................................................................
+................................................................................................................................................................
+........................................................................................................................................................
+Phase 8.8  Global Placement (Checksum:d77465c2) REAL time: 1 mins 39 secs 
+
+Phase 9.5  Local Placement Optimization
+Phase 9.5  Local Placement Optimization (Checksum:d77465c2) REAL time: 1 mins 39 secs 
+
+Phase 10.18  Placement Optimization
+Phase 10.18  Placement Optimization (Checksum:435bcd4a) REAL time: 1 mins 45 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:435bcd4a) REAL time: 1 mins 45 secs 
+
+Phase 12.34  Placement Validation
+Phase 12.34  Placement Validation (Checksum:435bcd4a) REAL time: 1 mins 45 secs 
+
+Total REAL time to Placer completion: 1 mins 45 secs 
+Total CPU  time to Placer completion: 1 mins 42 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    9
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,487 out of 106,400    2%
+    Number used as Flip Flops:               2,473
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               13
+  Number of Slice LUTs:                      2,416 out of  53,200    4%
+    Number used as logic:                    2,223 out of  53,200    4%
+      Number using O6 output only:           1,735
+      Number using O5 output only:              60
+      Number using O5 and O6:                  428
+      Number used as ROM:                        0
+    Number used as Memory:                     148 out of  17,400    1%
+      Number used as Dual Port RAM:             10
+        Number using O6 output only:             2
+        Number using O5 output only:             2
+        Number using O5 and O6:                  6
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           138
+        Number using O6 output only:           121
+        Number using O5 output only:             0
+        Number using O5 and O6:                 17
+    Number used exclusively as route-thrus:     45
+      Number with same-slice register load:     23
+      Number with same-slice carry load:        16
+      Number with other load:                    6
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,255 out of  13,300    9%
+  Number of LUT Flip Flop pairs used:        3,264
+    Number with an unused Flip Flop:           961 out of   3,264   29%
+    Number with an unused LUT:                 848 out of   3,264   25%
+    Number of fully used LUT-FF pairs:       1,455 out of   3,264   44%
+    Number of unique control sets:             177
+    Number of slice register sites lost
+      to control set restrictions:             763 out of 106,400    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        21 out of     200   10%
+    Number of LOCed IOBs:                       21 out of      21  100%
+  Number of bonded IOPAD:                      130 out of     130  100%
+    IOB Flip Flops:                              5
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  3 out of     140    2%
+    Number using RAMB36E1 only:                  3
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     280    0%
+  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
+    Number used as BUFGs:                        2
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     200    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     200    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        5 out of     200    2%
+    Number used as OLOGICE2s:                    5
+    Number used as OLOGICE3s:                    0
+    Number used as OSERDESE2s:                   0
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      16    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      16    0%
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHCEs:                             0 out of      72    0%
+  Number of BUFRs:                               0 out of      16    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     220    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       4    0%
+  Number of IN_FIFOs:                            0 out of      16    0%
+  Number of MMCME2_ADVs:                         0 out of       4    0%
+  Number of OUT_FIFOs:                           0 out of      16    0%
+  Number of PHASER_REFs:                         0 out of       4    0%
+  Number of PHY_CONTROLs:                        0 out of       4    0%
+  Number of PLLE2_ADVs:                          0 out of       4    0%
+  Number of PS7s:                                1 out of       1  100%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+  Number of RPM macros:            9
+Average Fanout of Non-Clock Nets:                3.74
+
+Peak Memory Usage:  900 MB
+Total REAL time to MAP completion:  1 mins 48 secs 
+Total CPU time to MAP completion:   1 mins 45 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/data/parBmgr.acd> with local file
+<C:/Xilinx/14.7/ISE_DS/ISE/data/parBmgr.acd>
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '7z020.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.08 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BSCANs                          1 out of 4      25%
+   Number of BUFGs                           2 out of 32      6%
+   Number of External IOB33s                21 out of 200    10%
+      Number of LOCed IOB33s                21 out of 21    100%
+
+   Number of External IOPADs               130 out of 130   100%
+      Number of LOCed IOPADs               127 out of 130    97%
+
+   Number of OLOGICE2s                       5 out of 200     2%
+   Number of PS7s                            1 out of 1     100%
+   Number of RAMB36E1s                       3 out of 140     2%
+   Number of Slices                       1255 out of 13300   9%
+   Number of Slice Registers              2487 out of 106400  2%
+      Number used as Flip Flops           2486
+      Number used as Latches                 1
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   2416 out of 53200   4%
+   Number of Slice LUT-Flip Flop pairs    3188 out of 53200   5%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 19 secs 
+Finished initial Timing Analysis.  REAL time: 19 secs 
+
+WARNING:Par:288 - The signal
+   axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
+   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM
+   _RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 17181 unrouted;      REAL time: 20 secs 
+
+Phase  2  : 13504 unrouted;      REAL time: 21 secs 
+
+Phase  3  : 4683 unrouted;      REAL time: 25 secs 
+
+Phase  4  : 4688 unrouted; (Setup:0, Hold:34772, Component Switching Limit:0)     REAL time: 29 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
+Total REAL time to Router completion: 34 secs 
+Total CPU time to Router completion: 28 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|processing_system7_0 |              |      |      |            |             |
+|          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   |  905 |  0.357     |  1.978      |
++---------------------+--------------+------+------+------------+-------------+
+|chipscope_ila_0_icon |              |      |      |            |             |
+|         _control<0> | BUFGCTRL_X0Y0| No   |   52 |  0.115     |  1.768      |
++---------------------+--------------+------+------+------------+-------------+
+|chipscope_ila_0_icon |              |      |      |            |             |
+|        _control<13> |         Local|      |    5 |  0.000     |  0.883      |
++---------------------+--------------+------+------+------------+-------------+
+|chipscope_icon_0/chi |              |      |      |            |             |
+|pscope_icon_0/i_chip |              |      |      |            |             |
+|scope_icon_0/U0/iUPD |              |      |      |            |             |
+|             ATE_OUT |         Local|      |    1 |  0.000     |  1.482      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.102ns|     9.898ns|       0|           0
+  0" 100 MHz HIGH 50%                       | HOLD        |     0.007ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_interconnect_1_reset_resync_ | SETUP       |         N/A|     1.123ns|     N/A|           0
+  path" TIG                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi4lite_0_reset_resync_path" TI | SETUP       |         N/A|     1.118ns|     N/A|           0
+  G                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 36 secs 
+Total CPU time to PAR completion: 30 secs 
+
+Peak Memory Usage:  738 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 1
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.7/ISE_DS/EDK/zynq/data/zynq.acd>
+with local file <C:/Xilinx/14.7/ISE_DS/ISE/zynq/data/zynq.acd>
+Loading device for application Rf_Device from file '7z020.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more
+   information, see the TSI report.  Please consult the Xilinx Command Line
+   Tools User Guide for information on generating a TSI report.
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
+system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc7z020,-1 (PRODUCTION 1.08 2013-10-13)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths option. All paths that are not constrained will be reported in
+   the unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a 50 Ohm transmission line loading model.  For the details of
+   this model, and for more information on accounting for different loading conditions, please see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
+
+Constraints cover 224043 paths, 0 nets, and 13738 connections
+
+Design statistics:
+   Minimum period:   9.898ns (Maximum frequency: 101.031MHz)
+
+
+Analysis completed Fri May 06 14:10:37 2016
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 4
+Total time: 14 secs 
+
+

@@ -1,0 +1,3 @@
+1.用bram
+2.二個function
+3.加state或控制訊號

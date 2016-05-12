@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="D:\zynq_memcpy\SDK\SDK_Export\hw\system.bit" key="zynq_memcpy_hw_platform-bitFile"/>
+	<item value="" key="zynq_memcpy_hw_platform-bmmFile"/>
+</section>

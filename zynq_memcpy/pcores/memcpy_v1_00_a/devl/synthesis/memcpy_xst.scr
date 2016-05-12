@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "D:\xps\zynq_memcpy\pcores\memcpy_v1_00_a\devl\synthesis\memcpy_xst.prj"
+-top memcpy
+-p virtex6
+-ofn "D:\xps\zynq_memcpy\pcores\memcpy_v1_00_a\devl\synthesis\memcpy_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib memcpy_v1_00_a

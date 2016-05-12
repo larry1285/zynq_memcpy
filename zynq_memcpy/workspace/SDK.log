@@ -1,0 +1,82 @@
+18:23:35.090 INFO  - Processing command line option -hwspec D:\xps\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+18:24:29.184 INFO  - Processing command line option -hwspec D:\xps\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+09:45:16.534 INFO  - Processing command line option -hwspec D:\xps\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+09:45:17.654 INFO  - The hardware specification for project 'zynq_memcpy_hw_platform' is different from D:\xps\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+09:45:17.964 INFO  - Copied contents of D:\xps\zynq_memcpy\SDK\SDK_Export\hw\system.xml into \zynq_memcpy_hw_platform\system.xml. 
+09:45:17.974 INFO  - Copied contents of D:\xps\zynq_memcpy\SDK\SDK_Export\hw\system.bit into \zynq_memcpy_hw_platform\system.bit. 
+09:45:17.974 INFO  - Copied contents of D:\xps\zynq_memcpy\SDK\SDK_Export\hw\ps7_init.c into \zynq_memcpy_hw_platform\ps7_init.c. 
+09:45:17.974 INFO  - Copied contents of D:\xps\zynq_memcpy\SDK\SDK_Export\hw\ps7_init.h into \zynq_memcpy_hw_platform\ps7_init.h. 
+09:45:17.974 INFO  - Copied contents of D:\xps\zynq_memcpy\SDK\SDK_Export\hw\ps7_init.html into \zynq_memcpy_hw_platform\ps7_init.html. 
+09:45:17.974 INFO  - Copied contents of D:\xps\zynq_memcpy\SDK\SDK_Export\hw\ps7_init.tcl into \zynq_memcpy_hw_platform\ps7_init.tcl. 
+09:45:18.134 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+09:45:21.374 INFO  - Updating hardware inferred compiler options for copy_test. 
+09:45:21.414 INFO  - Clearing existing target manager status. 
+14:40:45.649 INFO  - Processing command line option -hwspec D:\xps\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+13:11:00.297 INFO  - Processing command line option -hwspec D:\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+13:47:03.334 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+13:48:05.926 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+13:50:55.494 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+13:52:07.205 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+13:53:22.540 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:53:22.649 INFO  - PS initialization will be done as it is not done before. 
+13:53:22.649 INFO  - Running PS initialization.... 
+13:53:22.790 INFO  - ps7_init is completed. 
+13:53:22.899 INFO  - ps7_post_config is completed. 
+13:53:23.008 INFO  - PS Initialization is complete. 
+13:55:47.070 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+13:56:04.824 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:56:07.554 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+13:56:21.282 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+13:57:16.351 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:57:20.286 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+14:37:48.572 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+14:38:07.110 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:38:13.882 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+14:38:27.746 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+14:38:37.951 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:38:39.699 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+14:39:08.379 INFO  - FPGA configured successfully with bitstream "D:/zynq_memcpy/SDK/SDK_Export/hw/system.bit" 
+14:52:15.961 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:52:21.749 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+14:53:11.625 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:53:13.481 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+14:53:22.484 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/RemoteSystemsTempFiles' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+14:55:01.320 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:55:16.083 INFO  - Processing command line option -hwspec D:\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+15:19:59.754 INFO  - Processing command line option -hwspec D:\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+15:57:16.610 INFO  - Processing command line option -hwspec D:\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+13:09:28.915 INFO  - Processing command line option -hwspec D:\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+14:02:24.579 INFO  - Processing command line option -hwspec D:\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 
+14:11:39.774 INFO  - Processing command line option -hwspec D:\zynq_memcpy\SDK\SDK_Export\hw\system.xml. 

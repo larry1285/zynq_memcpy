@@ -1,0 +1,23 @@
+14:40:39 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:165:4: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27552	   1368	  29932	  58852	   e5e4	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+
+14:40:41 Build Finished (took 1s.592ms)
+

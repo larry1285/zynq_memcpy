@@ -1,0 +1,176 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SHLAB_19-PC::  Fri May 06 14:09:45 2016
+
+par -w -ol high system_map.ncd system.ncd system.pcf 
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '7z020.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\;C:\Xilinx\14.7\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.08 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BSCANs                          1 out of 4      25%
+   Number of BUFGs                           2 out of 32      6%
+   Number of External IOB33s                21 out of 200    10%
+      Number of LOCed IOB33s                21 out of 21    100%
+
+   Number of External IOPADs               130 out of 130   100%
+      Number of LOCed IOPADs               127 out of 130    97%
+
+   Number of OLOGICE2s                       5 out of 200     2%
+   Number of PS7s                            1 out of 1     100%
+   Number of RAMB36E1s                       3 out of 140     2%
+   Number of Slices                       1255 out of 13300   9%
+   Number of Slice Registers              2487 out of 106400  2%
+      Number used as Flip Flops           2486
+      Number used as Latches                 1
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   2416 out of 53200   4%
+   Number of Slice LUT-Flip Flop pairs    3188 out of 53200   5%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 19 secs 
+Finished initial Timing Analysis.  REAL time: 19 secs 
+
+WARNING:Par:288 - The signal
+   axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mra
+   m_RAM_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[0].gen_prot_conv.conv_inst/gen_axi3.axi3_conv_inst/USE_WRIT
+   E.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM
+   _RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 17181 unrouted;      REAL time: 20 secs 
+
+Phase  2  : 13504 unrouted;      REAL time: 21 secs 
+
+Phase  3  : 4683 unrouted;      REAL time: 25 secs 
+
+Phase  4  : 4688 unrouted; (Setup:0, Hold:34772, Component Switching Limit:0)     REAL time: 29 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:28825, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
+Total REAL time to Router completion: 34 secs 
+Total CPU time to Router completion: 28 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|processing_system7_0 |              |      |      |            |             |
+|          _FCLK_CLK0 |BUFGCTRL_X0Y31| No   |  905 |  0.357     |  1.978      |
++---------------------+--------------+------+------+------------+-------------+
+|chipscope_ila_0_icon |              |      |      |            |             |
+|         _control<0> | BUFGCTRL_X0Y0| No   |   52 |  0.115     |  1.768      |
++---------------------+--------------+------+------+------------+-------------+
+|chipscope_ila_0_icon |              |      |      |            |             |
+|        _control<13> |         Local|      |    5 |  0.000     |  0.883      |
++---------------------+--------------+------+------+------------+-------------+
+|chipscope_icon_0/chi |              |      |      |            |             |
+|pscope_icon_0/i_chip |              |      |      |            |             |
+|scope_icon_0/U0/iUPD |              |      |      |            |             |
+|             ATE_OUT |         Local|      |    1 |  0.000     |  1.482      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     0.102ns|     9.898ns|       0|           0
+  0" 100 MHz HIGH 50%                       | HOLD        |     0.007ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_interconnect_1_reset_resync_ | SETUP       |         N/A|     1.123ns|     N/A|           0
+  path" TIG                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi4lite_0_reset_resync_path" TI | SETUP       |         N/A|     1.118ns|     N/A|           0
+  G                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 36 secs 
+Total CPU time to PAR completion: 30 secs 
+
+Peak Memory Usage:  738 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 1
+
+Writing design to file system.ncd
+
+
+
+PAR done!

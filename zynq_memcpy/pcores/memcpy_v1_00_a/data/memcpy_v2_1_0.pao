@@ -1,0 +1,12 @@
+##############################################################################
+## Filename:          D:/xps/zynq_memcpy/pcores/memcpy_v1_00_a/data/memcpy_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Apr 25 11:29:19 2016 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib axi_master_burst_v1_00_a  all 
+lib memcpy_v1_00_a user_logic verilog
+lib memcpy_v1_00_a bram2p verilog
+lib memcpy_v1_00_a memcpy vhdl

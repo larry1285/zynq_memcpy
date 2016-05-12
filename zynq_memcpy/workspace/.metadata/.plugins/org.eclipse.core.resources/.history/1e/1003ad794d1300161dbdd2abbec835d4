@@ -1,0 +1,169 @@
+// /* ///////////////////////////////////////////////////////////////////// */
+// /*  This program performs a memory copy test.                            */
+// /* ///////////////////////////////////////////////////////////////////// */
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// #include "xtime_l.h"
+// #include "xparameters.h"
+// #include "xil_cache.h"
+
+// #define COUNTS_PER_USECOND  (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / 2000000)
+
+// #define Number_Of_Runs 100
+// #define COPY_SIZE      1000 /* in bytes */
+
+// volatile int *hw_active = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x0);
+// volatile int *dst_reg   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x4);
+// volatile int *src_reg   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x8);
+// volatile int *len_reg   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0xc);
+
+// long get_usec_time()
+// {
+    // XTime time_tick;
+
+    // XTime_GetTime(&time_tick);
+    // return (long) (time_tick / COUNTS_PER_USECOND);
+// }
+
+// /* ========================================================================== */
+// /*  Note: The 'len' parameter of my_memcpy() must be a multiple of 4 bytes.   */
+// /* ========================================================================== */
+// void hw_memcpy(void *dst, void *src, int len)
+// {
+	// /* flush the memory area from the CPU cache */
+    // Xil_DCacheFlushRange((unsigned int) src, len);
+    // Xil_DCacheFlushRange((unsigned int) dst, len);
+
+    // *dst_reg = (int) dst;   // destination word address
+    // *src_reg = (int) src;   // source word address
+    // *len_reg = len;         // transfer size in bytes, must be a multiple of 4!
+    // *hw_active = 1;         // trigger the HW IP
+    // while (*hw_active);     // wait for the transfer to finish
+// }
+
+// int main(int argc, char **argv)
+// {
+    // int   *src, *dst;
+    // int   i, j = 0;
+    // long  tick, total_time;
+
+    // src = malloc(sizeof(int) * COPY_SIZE);
+    // dst = malloc(sizeof(int) * COPY_SIZE);
+
+    // total_time = 0;
+
+    // printf("\n");
+    // for (j = 0; j < Number_Of_Runs; j++)
+    // {
+        // for (i = 0; i < COPY_SIZE; i++)
+        // {
+            // src[i] = rand() % 10000 + 1;
+        // }
+
+        // tick = get_usec_time();
+        // hw_memcpy(dst, src, COPY_SIZE*sizeof(int));
+        // tick = get_usec_time() - tick;
+
+        // for (i = 0; i < COPY_SIZE; i++)
+        // {
+            // if ((*(dst+i)) != src[i]) break;
+        // }
+
+        // if (i != COPY_SIZE)
+        // {
+            // printf("Iteration #%2d, copy %d words, data item #%d error.\n", j, COPY_SIZE, i-1);
+        // }
+        // else
+        // {
+            // printf("Iteration #%2d, copy %d words, all data passed.\n", j, COPY_SIZE);
+        // }
+
+        // total_time += tick;
+    // }
+    // printf("\nCopy %d words %d times from src = 0x%lx to dst = 0x%lx.\n",
+            // COPY_SIZE, Number_Of_Runs, (long unsigned) src, (long unsigned) dst);
+    // printf ("Average speed:%6.2f MBPS.\n", (float) COPY_SIZE*4*Number_Of_Runs/total_time);
+
+    // free(src), free(dst);
+    // return 0;
+// }
+/* ///////////////////////////////////////////////////////////////////// */
+/*  This program performs a memory copy test.                            */
+/* ///////////////////////////////////////////////////////////////////// */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "xtime_l.h"
+#include "xparameters.h"
+#include "xil_cache.h"
+
+#define COUNTS_PER_USECOND  (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / 2000000)
+
+#define Number_Of_Runs 100
+#define COPY_SIZE      1000 /* in bytes */
+
+volatile int *hw_active   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x0);
+volatile int *block_ptr   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x4); //the upper-left pixel address of the image block
+volatile int *stride      = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x8); //the width of the image that contains the block
+volatile int *bpp         = (int *) (XPAR_MEMCPY_0_BASEADDR + 0xc); //the number of bytes per pixel to copy, the value can be 1 or 4.  A char 8?8 matrix has bpp= 1, an integer 8?8 matrix has bpp= 4.
+
+int list_int[8][8]={
+					  {1,2,3,4,5,6,7,8},
+					  {21,22,23,24,25,26,27,28},
+					  {31,32,33,34,35,36,37,38},
+					  {41,42,43,44,45,46,47,48},
+					  {51,52,53,54,55,56,57,58},
+					  {61,62,63,64,65,66,67,68},
+					  {71,72,73,74,75,76,77,78},
+					  {81,82,83,84,85,86,87,88}
+					 };
+char list_char[8][8];
+
+long get_usec_time()
+{
+    XTime time_tick;
+
+    XTime_GetTime(&time_tick);
+    return (long) (time_tick / COUNTS_PER_USECOND);
+}
+
+/* ========================================================================== */
+/*  Note: The 'len' parameter of my_memcpy() must be a multiple of 4 bytes.   */
+/* ========================================================================== */
+void image_to_logic(unsigned int _block_ptr, int _stride)
+{
+	/* flush the memory area from the CPU cache */
+	Xil_DCacheFlushRange((unsigned int) list_int, 256);
+    *block_ptr = _block_ptr;
+    *stride = _stride;
+    *hw_active = 1;
+    xil_printf("zz");
+    while (*hw_active);
+	//hw_active==0
+}
+void logic_to_image(unsigned int _block_ptr, int _stride)
+{
+	/* flush the memory area from the CPU cache */
+	Xil_DCacheFlushRange((unsigned int) _block_ptr, 64);
+    *block_ptr = _block_ptr;
+    *stride = _stride;
+	*hw_active=2;
+	xil_printf("hahaha");
+	while (*hw_active);
+}
+int main(int argc, char **argv)
+{
+	int i,x;
+    image_to_logic((unsigned int)list_int,8);
+	logic_to_image((unsigned int)list_char,8);
+	for (i=0;i<8;i++){
+		for(x=0;x<8;x++)
+			xil_printf("%c",list_char[i][x]);
+		xil_printf("\n");
+	}
+	xil_printf("wtf");
+	return 0;
+}

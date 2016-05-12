@@ -1,0 +1,1261 @@
+18:25:46 **** Build of project copy_test_bsp ****
+make -k all 
+libgen -hw ../zynq_memcpy_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../zynq_memcpy_hw_platform/system.xml -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling common
+C:\dev_tools\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin\arm-xilinx-eabi-ar.exe: creating ../../../lib/libxil.a
+Compiling standalone
+Compiling gpio
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling xadcps
+Compiling cpu_cortexa9
+Running execs_generate.
+Finished building libraries
+
+**** Build of configuration Debug for project copy_test ****
+
+Nothing to build for project copy_test
+18:26:39 **** Auto Build of configuration Debug for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63648	   2280	  29852	  95780	  17624	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:27:10 **** Clean-only build of configuration Debug for project copy_test ****
+make clean 
+rm -rf  ./src/copy_test.o  ./src/copy_test.d  copy_test.elf.size  copy_test.elf
+ 
+18:27:10 **** Build of configuration Debug for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63648	   2280	  29852	  95780	  17624	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:27:18 **** Auto Build of configuration Debug for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63648	   2280	  29852	  95780	  17624	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:27:33 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63368	   2280	  29852	  95500	  1750c	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:31:04 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63368	   2280	  29852	  95500	  1750c	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:32:07 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:64:3: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+../src/copy_test.c:64:3: warning: incompatible implicit declaration of built-in function 'memcpy' [enabled by default]
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63308	   2280	  29852	  95440	  174d0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:32:24 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:65:3: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+../src/copy_test.c:65:3: warning: incompatible implicit declaration of built-in function 'memcpy' [enabled by default]
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63308	   2280	  29852	  95440	  174d0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:32:44 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63308	   2280	  29852	  95440	  174d0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:38:00 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60912	   2280	  29852	  93044	  16b74	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:47:08 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63368	   2280	  29852	  95500	  1750c	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:53:03 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63368	   2280	  29852	  95500	  1750c	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+18:53:28 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63368	   2280	  29852	  95500	  1750c	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+20:49:27 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63328	   2280	  29852	  95460	  174e4	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+20:59:40 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63328	   2280	  29852	  95460	  174e4	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+21:24:55 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63328	   2280	  29852	  95460	  174e4	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+09:45:18 **** Auto Build of project copy_test_bsp ****
+make -k all 
+Finished building libraries
+09:45:19 **** Clean-only build of configuration Release for project copy_test ****
+make clean 
+rm -rf  ./src/copy_test.o  ./src/copy_test.d  copy_test.elf.size  copy_test.elf
+ 
+09:45:19 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63328	   2280	  29852	  95460	  174e4	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+10:35:21 **** Clean-only build of configuration Release for project copy_test ****
+make clean 
+rm -rf  ./src/copy_test.o  ./src/copy_test.d  copy_test.elf.size  copy_test.elf
+ 
+10:35:21 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63324	   2280	  29852	  95456	  174e0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+11:04:36 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63324	   2280	  29852	  95456	  174e0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+13:24:05 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63324	   2280	  29852	  95456	  174e0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+13:24:46 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63328	   2280	  29852	  95460	  174e4	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+13:25:14 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63324	   2280	  29852	  95456	  174e0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+13:37:27 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63324	   2280	  29852	  95456	  174e0	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+14:40:45 **** Build of project copy_test_bsp ****
+make -k all 
+libgen -hw ../zynq_memcpy_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../zynq_memcpy_hw_platform/system.xml -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Compiling common
+C:\dev_tools\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin\arm-xilinx-eabi-ar.exe: creating ../../../lib/libxil.a
+Compiling standalone
+Compiling gpio
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling xadcps
+Compiling cpu_cortexa9
+Running execs_generate.
+Finished building libraries
+14:41:01 **** Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+16:23:35 **** Auto Build of configuration Release for project copy_test ****
+make all 
+Building file: ../src/copy_test.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+Finished building: ../src/copy_test.c
+ 
+Building target: copy_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: copy_test.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63328	   2280	  29852	  95460	  174e4	copy_test.elf
+Finished building: copy_test.elf.size
+ 
+13:11:04 **** Auto Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+13:11:41 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:140:38: error: 'src' undeclared (first use in this function)
+../src/copy_test.c:140:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/copy_test.c:140:43: error: 'len' undeclared (first use in this function)
+../src/copy_test.c:141:41: error: 'dst' undeclared (first use in this function)
+../src/copy_test.c: In function 'logic_to_image':
+../src/copy_test.c:151:38: error: 'src' undeclared (first use in this function)
+../src/copy_test.c:151:43: error: 'len' undeclared (first use in this function)
+../src/copy_test.c:152:41: error: 'dst' undeclared (first use in this function)
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:160:5: warning: passing argument 1 of 'image_to_logic' makes integer from pointer without a cast [enabled by default]
+../src/copy_test.c:137:6: note: expected 'int' but argument is of type 'int (*)[10]'
+../src/copy_test.c:161:2: warning: passing argument 1 of 'logic_to_image' makes integer from pointer without a cast [enabled by default]
+../src/copy_test.c:148:6: note: expected 'int' but argument is of type 'char (*)[10]'
+../src/copy_test.c:162:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/copy_test.c:162:2: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/copy_test.c:163:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/copy_test.c:164:4: error: 'print' undeclared (first use in this function)
+../src/copy_test.c:164:9: error: expected ';' before string constant
+../src/copy_test.c:165:8: error: expected ';' before string constant
+../src/copy_test.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/copy_test.o] Error 1
+13:13:53 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:163:4: error: 'print' undeclared (first use in this function)
+../src/copy_test.c:163:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/copy_test.c:163:9: error: expected ';' before string constant
+../src/copy_test.c:164:8: error: expected ';' before string constant
+../src/copy_test.c:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/copy_test.o] Error 1
+13:14:01 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:163:4: warning: statement with no effect [-Wunused-value]
+../src/copy_test.c:163:10: error: expected ';' before string constant
+../src/copy_test.c:164:3: warning: statement with no effect [-Wunused-value]
+../src/copy_test.c:164:9: error: expected ';' before string constant
+../src/copy_test.c:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/copy_test.o] Error 1
+13:14:20 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:167:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33480	   2552	  29948	  65980	  101bc	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:14:41 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33484	   2552	  29948	  65984	  101c0	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:23:03 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:37: error: expected ';' before '}' token
+make: *** [src/copy_test.o] Error 1
+13:24:06 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62816	   2680	  29964	  95460	  174e4	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:47:59 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+13:53:20 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+13:55:30 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35560	   2552	  29948	  68060	  109dc	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:56:03 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+13:57:15 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+14:38:06 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+14:38:37 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+14:52:15 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+14:53:10 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+14:54:15 **** Incremental Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+14:57:31 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'logic_to_image':
+../src/copy_test.c:154:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+../src/copy_test.c:154:39: error: expected ';' before '}' token
+make: *** [src/copy_test.o] Error 1
+14:57:39 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'logic_to_image':
+../src/copy_test.c:154:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35640	   2552	  29948	  68140	  10a2c	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:58:11 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'logic_to_image':
+../src/copy_test.c:154:40: error: expected ';' before '}' token
+make: *** [src/copy_test.o] Error 1
+14:58:21 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2552	  29948	  68096	  10a00	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:58:28 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2552	  29948	  68096	  10a00	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:58:47 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35592	   2552	  29948	  68092	  109fc	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:58:56 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2552	  29948	  68096	  10a00	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+15:20:05 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2552	  29948	  68096	  10a00	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:10:52 **** Build of project copy_test_bsp ****
+make -k all 
+'Finished building libraries'
+13:10:53 **** Build of configuration Release for project copy_test ****
+make all 
+make: Nothing to be done for `all'.
+13:26:13 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c:122:8: warning: excess elements in array initializer [enabled by default]
+../src/copy_test.c:122:8: warning: (near initialization for 'list_int') [enabled by default]
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:144:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2408	  29916	  67920	  10950	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:26:57 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2408	  29916	  67920	  10950	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:27:18 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2408	  29916	  67920	  10950	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:28:52 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35596	   2408	  29916	  67920	  10950	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:32:46 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35576	   2408	  29916	  67900	  1093c	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:32:56 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27576	   1368	  29852	  58796	   e5ac	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:39:23 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27592	   1368	  29852	  58812	   e5bc	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:43:35 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'logic_to_image':
+../src/copy_test.c:150:34: error: expected expression before 'char'
+make: *** [src/copy_test.o] Error 1
+13:44:01 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'logic_to_image':
+../src/copy_test.c:150:36: error: expected expression before 'char'
+make: *** [src/copy_test.o] Error 1
+13:44:24 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27636	   1368	  29852	  58856	   e5e8	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+13:46:06 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:163:6: error: expected identifier or '(' before '[' token
+make: *** [src/copy_test.o] Error 1
+13:46:12 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:163:6: error: expected identifier or '(' before '[' token
+make: *** [src/copy_test.o] Error 1
+13:46:28 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:163:6: error: expected identifier or '(' before '[' token
+make: *** [src/copy_test.o] Error 1
+13:46:40 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27636	   1368	  29852	  58856	   e5e8	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:22:45 **** Build of project copy_test_bsp ****
+make -k all 
+'Finished building libraries'
+14:22:46 **** Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27636	   1368	  29852	  58856	   e5e8	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:25:39 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27628	   1368	  29852	  58848	   e5e0	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:26:57 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27632	   1368	  29852	  58852	   e5e4	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:28:23 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'image_to_logic':
+../src/copy_test.c:143:5: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27596	   1368	  29852	  58816	   e5c0	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:29:05 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:165:4: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27552	   1368	  29852	  58772	   e594	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:30:12 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:165:4: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27552	   1368	  29932	  58852	   e5e4	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:31:55 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:165:4: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27552	   1368	  29932	  58852	   e5e4	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:36:39 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:165:4: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27552	   1368	  29932	  58852	   e5e4	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '
+14:40:39 **** Auto Build of configuration Release for project copy_test ****
+make all 
+'Building file: ../src/copy_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O2 -c -fmessage-length=0 -I../../copy_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/copy_test.d" -MT"src/copy_test.d" -o "src/copy_test.o" "../src/copy_test.c"
+../src/copy_test.c: In function 'main':
+../src/copy_test.c:165:4: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/copy_test.c'
+' '
+'Building target: copy_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../copy_test_bsp/ps7_cortexa9_0/lib -o "copy_test.elf"  ./src/copy_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: copy_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size copy_test.elf  |tee "copy_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27552	   1368	  29932	  58852	   e5e4	copy_test.elf
+'Finished building: copy_test.elf.size'
+' '

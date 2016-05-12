@@ -1,0 +1,91 @@
+/* ///////////////////////////////////////////////////////////////////// */
+/*  This program performs a memory copy test.                            */
+/* ///////////////////////////////////////////////////////////////////// */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "xtime_l.h"
+#include "xparameters.h"
+#include "xil_cache.h"
+
+#define COUNTS_PER_USECOND  (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ / 2000000)
+
+#define Number_Of_Runs 100
+#define COPY_SIZE      9 /* in words */
+
+volatile int *hw_active = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x0);
+volatile int *dst_reg   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x4);
+volatile int *src_reg   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0x8);
+volatile int *len_reg   = (int *) (XPAR_MEMCPY_0_BASEADDR + 0xc);
+
+long get_usec_time()
+{
+    XTime time_tick;
+
+    XTime_GetTime(&time_tick);
+    return (long) (time_tick / COUNTS_PER_USECOND);
+}
+
+/* ========================================================================== */
+/*  Note: The 'len' parameter of my_memcpy() must be a multiple of 4 bytes.   */
+/* ========================================================================== */
+void hw_memcpy(void *dst, void *src, int len)
+{
+	/* flush the memory area from the CPU cache */
+    Xil_DCacheFlushRange((unsigned int) src, len);
+    Xil_DCacheFlushRange((unsigned int) dst, len);
+
+    *dst_reg = (int) dst;   // destination word address
+    *src_reg = (int) src;   // source word address
+    *len_reg = len;         // transfer size in bytes, must be a multiple of 4!
+    *hw_active = 1;         // trigger the HW IP
+    while (*hw_active);     // wait for the transfer to finish
+}
+
+int main(int argc, char **argv)
+{
+    int   *src, *dst;
+    int   i, j = 0;
+    long  tick, total_time;
+
+    src = malloc(sizeof(int) * COPY_SIZE);
+    dst = malloc(sizeof(int) * COPY_SIZE);
+
+    total_time = 0;
+
+    printf("\n");
+    for (j = 0; j < Number_Of_Runs; j++)
+    {
+        for (i = 0; i < COPY_SIZE; i++)
+        {
+            src[i] = rand() % 10000 + 1;
+        }
+
+        tick = get_usec_time();
+        hw_memcpy(dst, src, COPY_SIZE*sizeof(int));
+        tick = get_usec_time() - tick;
+
+        for (i = 0; i < COPY_SIZE; i++)
+        {
+            if ((*(dst+i)) != src[i]) break;
+        }
+
+        if (i != COPY_SIZE)
+        {
+            printf("Iteration #%2d, copy %d words, data item #%d error.\n", j, COPY_SIZE, i-1);
+        }
+        else
+        {
+            printf("Iteration #%2d, copy %d words, all data passed.\n", j, COPY_SIZE);
+        }
+
+        total_time += tick;
+    }
+    printf("\nCopy %d words %d times from src = 0x%lx to dst = 0x%lx.\n",
+            COPY_SIZE, Number_Of_Runs, (long unsigned) src, (long unsigned) dst);
+    printf ("Average speed:%6.2f MBPS.\n", (float) COPY_SIZE*4*Number_Of_Runs/total_time);
+
+    free(src), free(dst);
+    return 0;
+}
